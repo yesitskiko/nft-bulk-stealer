@@ -21,7 +21,7 @@ for index in range(start_idx, 10000):
         exit()
     json_raw = scraper_out.text
     json_obj = json.loads(json_raw)
-    print("=> Downloading NFT #{i} [{url}]".format(i=index, url=json_obj["name"]))
+    print("=> Downloading NFT #{i} [{name}]".format(i=index, name=json_obj["name"]))
 
     cwd = os.getcwd()
     nft_path = os.path.join(cwd, "output")
